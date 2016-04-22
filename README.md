@@ -45,4 +45,4 @@ Many Dapps have a built-in identity management solution as a fallback.
 When an Ethereum Browser environment has been detected,
 the user interface should reflect that the accounts are being managed externally.
 
-see also [ethereum wikin on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
+see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
