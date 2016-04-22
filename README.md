@@ -33,6 +33,11 @@ For this reason, we are unable to support most synchronous methods. The exceptio
 see [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
 
 
+### Network check
+
+When a user is interacting with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then the dapp can use the correct deployed contract addresses for the network, or show an error message.
+
+
 ### Account management and transaction signing is managed externally to the dapp
 
 Many Dapps have a built-in identity management solution as a fallback.
