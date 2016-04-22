@@ -37,6 +37,7 @@ see [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/J
 
 When a user is interacting with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then the dapp can use the correct deployed contract addresses for the network, or show an error message.
 
+see [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
 ### Account management and transaction signing is managed externally to the dapp
 
@@ -44,3 +45,4 @@ Many Dapps have a built-in identity management solution as a fallback.
 When an Ethereum Browser environment has been detected,
 the user interface should reflect that the accounts are being managed externally.
 
+see also [ethereum wikin on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
