@@ -8,7 +8,7 @@ While MetaMask exposes the standard web3 API, there are few things to keep in mi
 Web3.js is injected into the javascript context.
 Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / fail).
 You can use the injected web3 directly but best practices is to replace it with your own version of web3.js
-that you have use during development.
+that you have used during development.
 
 
 ```js
