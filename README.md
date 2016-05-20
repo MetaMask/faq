@@ -46,3 +46,21 @@ When an Ethereum Browser environment has been detected,
 the user interface should reflect that the accounts are being managed externally.
 
 see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
+
+### Account List Reflects User Preference
+
+When a user selects an account in MetaMask, that silently becomes the `web3.eth.defaultAccount` in your JS context, and becomes the only member of the `web3.eth.accounts` array, although there are ways we can allow this list to reflect multiple vaults, so it may not always be the *only* member.
+
+Since these variables reflect user intention, but do not (currently) have events representing their values changing, we somewhat reluctantly recommend using an interval to check for account changes.
+
+For example, if your application only cares about the `defaultAccount` value, you might add some code like this somewhere in your application:
+```javascript
+var account = web3.eth.defaultAccount;
+var accountInterval = setInterval(function() {
+  if (web3.eth.defaultAccount !== account) {
+    account = web3.eth.defaultAccount;
+    updateInterface();
+  }
+}, 100);
+```
+If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion, let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
