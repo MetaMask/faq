@@ -1,13 +1,13 @@
 # MetaMask Compatibility Guide
 
-While MetaMask exposes the standard web3 API, there are few things to keep in mind. Below are hard requirements for MetaMask support as well as some best practices to keep in mind.
+While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are hard requirements for MetaMask support as well as some best practices to keep in mind.
 
 ## Requirements
 
 ### Web3 - Ethereum Browser Environment Check
 
 Web3.js is injected into the javascript context.
-Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / fail).
+Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
 You can use the injected web3 directly but best practices is to replace it with your own version of web3.js
 that you have used during development.
 
