@@ -1,6 +1,6 @@
 # MetaMask Compatibility Guide
 
-While MetaMask exposes the standard web3 API, there are few things to keep in mind:
+While MetaMask exposes the standard web3 API, there are few things to keep in mind. Below are hard requirements for MetaMask support as well as some best practices to keep in mind.
 
 ## Requirements
 
