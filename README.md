@@ -2,6 +2,7 @@
 
 While MetaMask exposes the standard web3 API, there are few things to keep in mind:
 
+## Requirements
 
 ### Web3 - Ethereum Browser Environment Check
 
@@ -32,6 +33,7 @@ For this reason, we are unable to support most synchronous methods. The exceptio
 
 see [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
 
+## Best Practices
 
 ### Network check
 
