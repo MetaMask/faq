@@ -24,7 +24,7 @@ if (typeof web3 !== 'undefined') {
 from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
 
-### Async - Think of MetaMask as a light client
+### All Async - Think of MetaMask as a light client
 
 The user does not have the full blockchain on their machine and so data lookups can be a little slow.
 For this reason, we are unable to support most synchronous methods. The exception to this is:
