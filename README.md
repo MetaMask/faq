@@ -51,7 +51,7 @@ see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/Ja
 
 ### Account List Reflects User Preference
 
-When a user selects an account in MetaMask, that silently becomes the `web3.eth.defaultAccount` in your JS context, and becomes the only member of the `web3.eth.accounts` array, although there are ways we can allow this list to reflect multiple vaults, so it may not always be the *only* member.
+When a user selects an account in MetaMask, that silently becomes the `web3.eth.defaultAccount` in your JS context, and becomes the only member of the `web3.eth.accounts` array, although this may change in the future.
 
 Since these variables reflect user intention, but do not (currently) have events representing their values changing, we somewhat reluctantly recommend using an interval to check for account changes.
 
