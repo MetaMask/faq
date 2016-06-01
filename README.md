@@ -28,8 +28,8 @@ from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/
 
 The user does not have the full blockchain on their machine and so data lookups can be a little slow.
 For this reason, we are unable to support most synchronous methods. The exception to this is:
-* eth_accounts
-* eth_coinbase
+* `eth_accounts` (`web3.eth.accounts`)
+* `eth_coinbase` (`web3.eth.coinbase`)
 
 see [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
 
