@@ -66,3 +66,6 @@ var accountInterval = setInterval(function() {
 }, 100);
 ```
 If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion, let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
+
+#Debugging 
+For local development you may find it useful/necessary to check the box labeled 'Allow access to file URLs' in the chrome extension settings for Metamask.
