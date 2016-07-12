@@ -67,5 +67,11 @@ var accountInterval = setInterval(function() {
 ```
 If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion, let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
 
-##Debugging 
-For local development you may find it useful/necessary to check the box labeled 'Allow access to file URLs' in the chrome extension settings for Metamask.
+# MetaMask FAQ
+
+### Using a local node
+
+To run MetaMask against a local node you will need to lookup the url for the extension and list it as a CORS domain.
+You can find the extension ID in the extensions panel `chrome://extensions/`.
+Start geth with the following command, using your unique correct extension ID:
+`geth --rpc --rpccorsdomain="chrome-extension://pgfcgpgggeefgnajgbdojefgdddlgnpi"`.
