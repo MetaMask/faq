@@ -9,15 +9,15 @@ We've teamed up with Coinbase to bring you a quick, easy way to purchase small a
 
 ### How does it work?
 
-When you click on "Buy" a new web page will appear to begin the simple purchase flow. 
+When you click on "Buy" a new web page will appear to begin the simple purchase flow.
 
 ![Coinbae buy Widget](http://i.imgur.com/laHFQEn.png)
 
-After verifying your email address, and a phone number, simply enter your debit card number and expiry date, and $5 worth of ETH will instantly be sent to your MetaMask address. 
+After verifying your email address, and a phone number, simply enter your debit card number and expiry date, and $5 worth of ETH will instantly be sent to your MetaMask address.
 
 ### How much Ether can I buy?
 
-You can purchase up to $5 of ETH per day, up to a liftime total of $50. Beyond that limit, you'll be asked to create a Coinbase account to continue purchasing ETH via the MetaMask integration.
+You can purchase up to $5 of ETH per day, up to a liftime total of $50. Beyond that limit, you'll be asked to sign in to Coinbase and complete further verifications in order to continue purchasing ETH via the MetaMask integration.
 
 ### How long does it take?
 
@@ -25,11 +25,11 @@ It takes about two minutes to run through the purchase process. Once the purchas
 
 ### Why do I need to provide an email address and phone number?
 
-This helps Coinbase prevent fraud. 
+This helps Coinbase prevent fraud.
 
 ### Is available outside the US?
 
-No, not yet. Sorry. 
+No, not yet. Sorry.
 
 ### Are there other payment options available?
 
