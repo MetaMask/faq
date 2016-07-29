@@ -51,7 +51,9 @@ see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/Ja
 
 ### Account List Reflects User Preference
 
-When a user selects an account in MetaMask, that silently becomes the `web3.eth.defaultAccount` in your JS context, and becomes the only member of the `web3.eth.accounts` array, although this may change in the future.
+When a user selects an account in MetaMask, that silently becomes the `web3.eth.accounts[0]` in your JS context, the only member of the `web3.eth.accounts` array.
+
+The `web3.eth.defaultAccount` variable should be considered a dapp-provided variable for your own convenience, but should not be used as a data source of user intention.
 
 Since these variables reflect user intention, but do not (currently) have events representing their values changing, we somewhat reluctantly recommend using an interval to check for account changes.
 
