@@ -1,6 +1,6 @@
 # MetaMask Compatibility Guide
 
-While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are hard requirements for MetaMask support as well as some best practices to keep in mind.
+While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
 
 ## Requirements
 
@@ -23,6 +23,13 @@ if (typeof web3 !== 'undefined') {
 ```
 from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
+### We Handle User Authorization
+
+Forget what you know about key management, your Dapp likely won't need to call `sendRawTransaction` anymore.
+
+Any time you make a call that requires a private key to sign something (`sendTransaction`, `sign`), MetaMask will automatically prompt the user for permission, and then forward the signed request on to the blockchain (or return it to you, if it was a call to `sign`).
+
+Just listen for a response, and when the blockchain RPC has received the transaction and broadcast it, you'll get a callback.
 
 ### All Async - Think of MetaMask as a light client
 
@@ -31,7 +38,9 @@ For this reason, we are unable to support most synchronous methods. The exceptio
 * `eth_accounts` (`web3.eth.accounts`)
 * `eth_coinbase` (`web3.eth.coinbase`)
 
-see [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
+See [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
+
+Not only is this a technical limitation, it's also a user experience issue. When you use synchronous calls, you block the user's interface, and so it's a generally bad practice anyways. Think of this API restriction as a gift to your users.
 
 ## Best Practices
 
