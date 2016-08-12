@@ -11,20 +11,28 @@ Look for this before using your fallback strategy (local node / hosted node + in
 You can use the injected web3 directly but best practices is to replace it with your own version of web3.js
 that you have used during development.
 
-Note that I've wrapped the environmental web3 check in the `window.onload` callback function. This is hopefully a temporary workaround for some dapps that have hit issues with web3 being injected too late.
+Note that I've wrapped the environmental web3 check in the `window.onload` callback function. This avoids rare bugs where web3 is injected too late.
 
 ```js
-window.onload = function () {
+// It's possible you can already access web3 here and use it fine.
 
+window.addEventListener('load', function() {
+
+  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
   if (typeof web3 !== 'undefined') {
-    // Web3 has been injected by the browser (Mist/MetaMask)
+
+    //
     web3 = new Web3(web3.currentProvider);
   } else {
+    console.log('No web3? You should consider trying MetaMask!')
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
   }
 
-}
+  // Then you can now safely start your app & access web3 freely:
+  startApp()
+
+})
 ```
 from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
