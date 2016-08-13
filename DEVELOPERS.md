@@ -77,14 +77,16 @@ When a user selects an account in MetaMask, that silently becomes the `web3.eth.
 
 The `web3.eth.defaultAccount` variable should be considered a dapp-provided variable for your own convenience, but should not be used as a data source of user intention.
 
+### Responding to Selected Account Changes
+
 Since these variables reflect user intention, but do not (currently) have events representing their values changing, we somewhat reluctantly recommend using an interval to check for account changes.
 
-For example, if your application only cares about the `defaultAccount` value, you might add some code like this somewhere in your application:
+For example, if your application only cares about the `web3.eth.accounts[0]` value, you might add some code like this somewhere in your application:
 ```javascript
-var account = web3.eth.defaultAccount;
+var account = web3.eth.accounts[0];
 var accountInterval = setInterval(function() {
-  if (web3.eth.defaultAccount !== account) {
-    account = web3.eth.defaultAccount;
+  if (web3.eth.accounts[0] !== account) {
+    account = web3.eth.accounts[0];
     updateInterface();
   }
 }, 100);
