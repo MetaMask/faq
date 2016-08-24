@@ -10,6 +10,7 @@ There are three types of logs that you might need to check:
 ## Popup Logs (Chrome)
 
 To get logs from the popup:
+
 1. Click the MetaMask fox in the top right of your browser.
 2. Wait for the popup to open (or partially open if that's part of the bug).
 3. Right-click in the newly opened popup, and select `Inspect Element`.
@@ -20,6 +21,7 @@ To get logs from the popup:
 ## Background Logs (Chrome)
 
 To get logs from MetaMask's background process in Chrome:
+
 1. Right-click the MetaMask fox in the top right of your browser.
 2. Select `Manage Extensions`.
 3. Scroll down to `MetaMask`, and click the "Inspect views: `background page`" link.
