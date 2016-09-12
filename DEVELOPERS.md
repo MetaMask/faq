@@ -1,14 +1,14 @@
-# MetaMask Compatibility Guide
+# MetaMask Compatibility Guide 
 
 While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
 
-## Requirements
+## :nut_and_bolt: Requirements
 
-### Http(s) - Web Server Required
+### :globe_with_meridians: Http(s) - Web Server Required
 
 Due to browser security restrictions, we can't communicate with dapps running on `file://`. Please use a local server for development.
 
-### Web3 - Ethereum Browser Environment Check
+### :partly_sunny: Web3 - Ethereum Browser Environment Check
 
 Web3.js is injected into the javascript context.
 Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
@@ -37,7 +37,7 @@ window.addEventListener('load', function() {
 ```
 This code snippet is modified from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
-### We Handle User Authorization
+### :dancers: We Handle User Authorization
 
 Forget what you know about key management, your Dapp likely won't need to call `sendRawTransaction` anymore.
 
@@ -45,7 +45,7 @@ Any time you make a call that requires a private key to sign something (`sendTra
 
 Just listen for a response, and when the blockchain RPC has received the transaction and broadcast it, you'll get a callback.
 
-### All Async - Think of MetaMask as a light client
+### :dizzy: All Async - Think of MetaMask as a light client
 
 The user does not have the full blockchain on their machine and so data lookups can be a little slow.
 For this reason, we are unable to support most synchronous methods. The exception to this is:
@@ -56,15 +56,15 @@ See [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/J
 
 Not only is this a technical limitation, it's also a user experience issue. When you use synchronous calls, you block the user's interface, and so it's a generally bad practice anyways. Think of this API restriction as a gift to your users.
 
-## Best Practices
+## :bowtie: Best Practices
 
-### Network check
+### :construction_worker: Network check
 
 When a user is interacting with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then the dapp can use the correct deployed contract addresses for the network, or show a message which network is expected.
 
 see [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
-### Account management and transaction signing is managed externally to the dapp
+### :squirrel: Account management and transaction signing is managed externally to the dapp
 
 Many Dapps have a built-in identity management solution as a fallback.
 When an Ethereum Browser environment has been detected,
@@ -72,13 +72,13 @@ the user interface should reflect that the accounts are being managed externally
 
 see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
 
-### Account List Reflects User Preference
+### :raising_hand: Account List Reflects User Preference
 
 When a user selects an account in MetaMask, that silently becomes the `web3.eth.accounts[0]` in your JS context, the only member of the `web3.eth.accounts` array.
 
 The `web3.eth.defaultAccount` variable should be considered a dapp-provided variable for your own convenience, but should not be used as a data source of user intention.
 
-### Responding to Selected Account Changes
+### :ear: Listening for Selected Account Changes
 
 Since these variables reflect user intention, but do not (currently) have events representing their values changing, we somewhat reluctantly recommend using an interval to check for account changes.
 
