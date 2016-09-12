@@ -2,7 +2,7 @@
 
 While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
 
-## :nut_and_bolt: Requirements
+## Requirements :nut_and_bolt:
 
 ### :globe_with_meridians: Http(s) - Web Server Required
 
@@ -56,7 +56,7 @@ See [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/J
 
 Not only is this a technical limitation, it's also a user experience issue. When you use synchronous calls, you block the user's interface, and so it's a generally bad practice anyways. Think of this API restriction as a gift to your users.
 
-## :bowtie: Best Practices
+## Best Practices :bowtie: 
 
 ### :construction_worker: Network check
 
