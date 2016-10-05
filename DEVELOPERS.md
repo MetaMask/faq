@@ -52,6 +52,8 @@ For this reason, we are unable to support most synchronous methods. The exceptio
 * `eth_accounts` (`web3.eth.accounts`)
 * `eth_coinbase` (`web3.eth.coinbase`)
 
+Usually a method call can be made async by simply adding a callback as the last argument to a synchronous method.
+
 See [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
 
 Not only is this a technical limitation, it's also a user experience issue. When you use synchronous calls, you block the user's interface, and so it's a generally bad practice anyways. Think of this API restriction as a gift to your users.
