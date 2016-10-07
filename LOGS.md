@@ -2,10 +2,11 @@
 
 If you've run into an issue, and reported it on [our Github](https://github.com/MetaMask/metamask-plugin/issues) or [our Slack](http://slack.metamask.io/), but we haven't been able to figure it out, we might ask you to get us some logs.
 
-There are three types of logs that you might need to check:
+There are four types of logs that you might need to check:
 - Popup Logs
 - Background Logs
 - UI State Logs
+- Crash Logs
 
 ## Popup Logs (Chrome)
 
@@ -37,3 +38,11 @@ If you've found a visual glitch in the rendering of MetaMask, we might ask you f
 2. At the bottom of the console, enter the text `logState()` and hit `Enter`.
 3. The console will then spit out a big bunch of text, something that looks like [this](https://github.com/MetaMask/metamask-plugin/blob/master/development/states/account-detail.json).
 4. Copy that entire text blob and send it to us, ideally in [a new Github issue](https://github.com/MetaMask/metamask-plugin/issues/new).
+
+## Crash Logs (Chrome)
+
+If your bug involves crashing the whole browser, then having a browser console won't be much good! (It will be crashed).
+
+In these cases, you'll need to start your browser in a way that it writes its logs to the disk, so you can open that log file after the browser crashes.
+
+[This process is described here](https://www.chromium.org/for-testers/enable-logging), and we hope to write more specific steps on this in the future. If you have to go through this process, please do record the steps, so we can have more detailed instructions here for different platforms.
