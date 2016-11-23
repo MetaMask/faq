@@ -48,9 +48,11 @@ Just listen for a response, and when the blockchain RPC has received the transac
 ### :dizzy: All Async - Think of MetaMask as a light client
 
 The user does not have the full blockchain on their machine and so data lookups can be a little slow.
-For this reason, we are unable to support most synchronous methods. The exception to this is:
+For this reason, we are unable to support most synchronous methods. The exceptions to this is:
 * `eth_accounts` (`web3.eth.accounts`)
 * `eth_coinbase` (`web3.eth.coinbase`)
+* `eth_uninstallFilter` (`web3.eth.uninstallFilter`)
+* `web3.eth.reset` (uninstalls all filters).
 
 Usually a method call can be made async by simply adding a callback as the last argument to a synchronous method.
 
