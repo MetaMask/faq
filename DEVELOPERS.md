@@ -12,7 +12,7 @@ Due to browser security restrictions, we can't communicate with dapps running on
 
 Web3.js is injected into the javascript context.
 Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
-You can use the injected web3 directly but best practices is to replace it with your own version of web3.js
+You can use the injected web3 directly but best practices is to replace it with **your own version of web3.js**
 that you have used during development.
 
 Note that the environmental web3 check is wrapped in a `window.addEventListener('load', ...)` handler. This avoids race conditions with web3 injection timing.
@@ -23,11 +23,11 @@ window.addEventListener('load', function() {
   // Checking if Web3 has been injected by the browser (Mist/MetaMask)
   if (typeof web3 !== 'undefined') {
     // Use Mist/MetaMask's provider
-    web3 = new Web3(web3.currentProvider);
+    window.web3 = new Web3(web3.currentProvider);
   } else {
     console.log('No web3? You should consider trying MetaMask!')
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
   }
 
   // Now you can start your app & access web3 freely:
