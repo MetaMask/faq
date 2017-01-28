@@ -25,9 +25,12 @@ To get logs from MetaMask's background process in Chrome:
 
 1. Right-click the MetaMask fox in the top right of your browser.
 2. Select `Manage Extensions`.
+
+  ![image](https://cloud.githubusercontent.com/assets/1474978/22399076/f54b8d24-e549-11e6-9bf4-48bf8767f20d.png)
+
 3. Ensure "Developer Mode" is selected in the top right.
 
-![image](https://cloud.githubusercontent.com/assets/1474978/22398918/52c8e388-e546-11e6-92d5-dcf6daed7718.png)
+  ![image](https://cloud.githubusercontent.com/assets/1474978/22398918/52c8e388-e546-11e6-92d5-dcf6daed7718.png)
 
 4. Scroll down to `MetaMask`, and click the "Inspect views: `background page`" link.
 5. Wait for the new `Inspector` window to open.
