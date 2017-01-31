@@ -66,6 +66,25 @@ Not only is this a technical limitation, it's also a user experience issue. When
 
 When a user is interacting with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then the dapp can use the correct deployed contract addresses for the network, or show a message which network is expected.
 
+For example:
+```javascript
+web3.version.getNetwork((err, netId) => {
+  switch (netId) {
+    case "1":
+      console.log('This is mainnet')
+      break
+    case "2":
+      console.log('This is the deprecated Morden test network.')
+      break
+    case "3":
+      console.log('This is the ropsten teest network.')
+      break
+    default:
+      console.log('This is an unknown network.')
+  }
+})
+```
+
 see [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
 ### :squirrel: Account management and transaction signing is managed externally to the dapp
