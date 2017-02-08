@@ -53,6 +53,7 @@ For this reason, we are unable to support most synchronous methods. The exceptio
 * `eth_coinbase` (`web3.eth.coinbase`)
 * `eth_uninstallFilter` (`web3.eth.uninstallFilter`)
 * `web3.eth.reset` (uninstalls all filters).
+* `net_version` (`web3.version.network`).
 
 Usually a method call can be made async by simply adding a callback as the last argument to a synchronous method.
 
