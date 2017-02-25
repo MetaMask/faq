@@ -35,11 +35,12 @@ To add a pre-existing account to MetaMask, use the *Import Account* menu item. A
 
 ### How to Import an Account
 
-1. After logging into MetaMask, open the main menu and click **Import Account**, as shown here.
+1. After logging into MetaMask, open the main menu and click **Import Account**, as shown here. 
   ![Import Account](import-account.png).
 2. Use **Select Type** to specify which authentication method you plan to use: **Private Key** or **JSON File**. 
   ![Select Type](select-type.png)
 3. Enter the private key or browse to your JSON file and follow the prompts. 
-4. To verify that MetaMask has imported the account, click **Switch Accounts**. The imported account should appear in the list of accounts and should be marked "Loose".
+4. To verify that MetaMask has imported the account, click **Switch Accounts**. The imported account should appear in the list of accounts and should be marked "Loose". 
   ![Switch Accounts to Verify](switch-accounts-to-verify.png)
+
 
