@@ -53,3 +53,20 @@ If your bug involves crashing the whole browser, then having a browser console w
 In these cases, you'll need to start your browser in a way that it writes its logs to the disk, so you can open that log file after the browser crashes.
 
 [This process is described here](https://www.chromium.org/for-testers/enable-logging), and we hope to write more specific steps on this in the future. If you have to go through this process, please do record the steps, so we can have more detailed instructions here for different platforms.
+
+## Internal Storage (Chrome)
+
+If your bug has been highly severe, and there is suspicion of a security issue, the most extreme kind of data you could provide is your MetaMask internal storage.
+
+This includes your secret keys, used to control your accounts, encrypted with your password. You should never paste this data in public. MetaMask employees will never ask you for this data, unless you have already transferred all value away from that vault, and if you share this data, you give up all control over those accounts, so do it with the highest gravity.
+
+If your account has no funds left in it, or if it was only a testnet account, it may be appropriate to send this information to a MetaMask developer.
+
+Retrieve the data like this:
+
+1. Follow the steps above to open the `Background Logs (Chrome)`.
+2. Open the `Application` tab.
+3. Click the arrow next to the `Local Storage` item on the left menu.
+4. You should see an item called `chrome-extension://nkbi.....`.  Click this.
+5. In the row whose Key is `metamask-config`, double click the `Value` column, to highlight the config, and copy it. It should start something like: `{"meta":{"version":11},"data":{...`.
+6. Paste this into a text document, or somewhere safe, and send it to the trusted party to help debug.
