@@ -52,3 +52,8 @@ These clients also allow you to create accounts within themselves.  Those accoun
 The only way to send a transaction from a MetaMask account is by using the MetaMask UI to approve a transaction.
 
 That said, you can also export a MetaMask account, or import another account into MetaMask, but without these very deliberate steps, your accounts are very separate.
+
+## How to change the MetaMask popup's font size (Chrome)
+
+1. Visit `chrome-extension://ebjbdknjcgcbchkagneicjfpneaghdhb/popup.html` (this opens the popup in a browser window).
+2. Use the browser zoom commands to zoom out a few clicks. This is in the `View` menu. The zoom size on this tab should also affect the popup.
