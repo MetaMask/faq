@@ -12,10 +12,9 @@ Due to browser security restrictions, we can't communicate with dapps running on
 
 Web3.js is injected into the javascript context.
 Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
-You can use the injected web3 directly but best practices is to replace it with **your own version of web3.js**
-that you have used during development.
+You can use the injected web3 directly, but the best practice is to replace it with **the version of web3.js you used during development**.
 
-Note that the environmental web3 check is wrapped in a `window.addEventListener('load', ...)` handler. This avoids race conditions with web3 injection timing.
+Note that the environmental web3 check is wrapped in a `window.addEventListener('load', ...)` handler. This approach avoids race conditions with web3 injection timing.
 
 ```js
 window.addEventListener('load', function() {
@@ -47,25 +46,23 @@ Just listen for a response, and when the blockchain RPC has received the transac
 
 ### :dizzy: All Async - Think of MetaMask as a light client
 
-The user does not have the full blockchain on their machine and so data lookups can be a little slow.
-For this reason, we are unable to support most synchronous methods. The exceptions to this is:
+The user does not have the full blockchain on their machinek, so data lookups can be a little slow.
+For this reason, we are unable to support most synchronous methods. The exceptions to this are:
 * `eth_accounts` (`web3.eth.accounts`)
 * `eth_coinbase` (`web3.eth.coinbase`)
 * `eth_uninstallFilter` (`web3.eth.uninstallFilter`)
 * `web3.eth.reset` (uninstalls all filters).
 * `net_version` (`web3.version.network`).
 
-Usually a method call can be made async by simply adding a callback as the last argument to a synchronous method.
+Usually, to make a method call asynchronous, add a callback as the last argument to a synchronous method. See the [Ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
 
-See [ethereum wiki on "using callbacks"](https://github.com/ethereum/wiki/wiki/JavaScript-API#using-callbacks)
-
-Not only is this a technical limitation, it's also a user experience issue. When you use synchronous calls, you block the user's interface, and so it's a generally bad practice anyways. Think of this API restriction as a gift to your users.
+Using synchronous calls is both a technical limitation and a user experience issue. They block the user's interface. So using them is a bad practice, anyway. Think of this API restriction as a gift to your users.
 
 ## Best Practices :bowtie: 
 
 ### :construction_worker: Network check
 
-When a user is interacting with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then the dapp can use the correct deployed contract addresses for the network, or show a message which network is expected.
+When a user interacts with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then, the dapp can use the correct deployed contract addresses for the network, or show which network is expected in a message.
 
 For example:
 ```javascript
@@ -86,21 +83,20 @@ web3.version.getNetwork((err, netId) => {
 })
 ```
 
-see [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
+See the [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
 ### :squirrel: Account management and transaction signing is managed externally to the dapp
 
 Many Dapps have a built-in identity management solution as a fallback.
-When an Ethereum Browser environment has been detected,
-the user interface should reflect that the accounts are being managed externally.
+When an Ethereum Browser environment has been detected, the user interface should reflect that the accounts are being managed externally.
 
-see also [ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
+Also see the [Ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
 
 ### :raising_hand: Account List Reflects User Preference
 
-When a user selects an account in MetaMask, that silently becomes the `web3.eth.accounts[0]` in your JS context, the only member of the `web3.eth.accounts` array.
+When a user selects an account in MetaMask, that account silently becomes the `web3.eth.accounts[0]` in your JS context, the only member of the `web3.eth.accounts` array.
 
-The `web3.eth.defaultAccount` variable should be considered a dapp-provided variable for your own convenience, but should not be used as a data source of user intention.
+For your convenience, consider the `web3.eth.defaultAccount` variable a dapp-provided variable. However, it should not be used as a data source of user intention.
 
 ### :ear: Listening for Selected Account Changes
 
@@ -116,5 +112,5 @@ var accountInterval = setInterval(function() {
   }
 }, 100);
 ```
-If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion, let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
+If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion. Let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
 
