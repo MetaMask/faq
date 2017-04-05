@@ -29,7 +29,7 @@ As a precaution, keep the information you were using to access this "Loose" acco
 You can import external accounts into MetaMask.
 
 ### Introduction
-To add a pre-existing account to MetaMask, use the *Import Account* menu item. Afterwards, you can configure MetaMask to use the imported account by selecting it with the *Switch Accounts* menu item. 
+To add a pre-existing account to MetaMask, use the *Import Account* menu item. Afterward, you can configure MetaMask to use the imported account by selecting it with the *Switch Accounts* menu item. 
 
 **Warning**: Imported accounts are not protected by the seed phrase that was generated when you created your original MetaMask account and are therefore marked as *loose*. Therefore, back-up all account information for accounts before you import them to MetaMask.
 
@@ -45,9 +45,9 @@ To add a pre-existing account to MetaMask, use the *Import Account* menu item. A
 
 ## Why are My Accounts Different Than My Client?
 
-If you are running your own full blockchain node like geth or parity, MetaMask can connect to it to allow a fully locally hosted experience, which includes greater decentralization, and faster load times.
+If you are running a full blockchain node like geth or parity, MetaMask can connect to it to allow a fully locally hosted experience, which includes greater decentralization, and faster load times.
 
-These clients also allow you to create accounts within themselves.  Those accounts are not related to your MetaMask accounts at all! MetaMask creates and encrypts your accounts within its own process, keeping them neatly secured from your blockchain process.
+These clients also allow you to create accounts within themselves.  Those accounts are not related to your MetaMask accounts at all! MetaMask creates and encrypts your accounts within its process, keeping them neatly secured from your blockchain process.
 
 The only way to send a transaction from a MetaMask account is by using the MetaMask UI to approve a transaction.
 
