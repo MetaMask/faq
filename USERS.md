@@ -17,6 +17,19 @@ Start geth with the following command, using your unique correct extension ID:
 
  ![image](https://cloud.githubusercontent.com/assets/1474978/16848422/a0ea403a-49aa-11e6-9e62-71c19870dd87.png)
  
+## Managing Tokens
+
+MetaMask does not currently display your token balances, but that doesn't mean you can't manage your tokens with MetaMask!
+
+Since MetaMask allows any website to interact with the blockchain, you can use any token managing UI you like to view and send tokens.
+
+A few popular options are:
+- [The Ethereum Wallet](https://wallet.ethereum.org/)
+- [Token Ninja](https://tokenninja.github.io/page)
+- [Token Factory](https://tokenfactory.surge.sh/#/factory)
+
+Just visit any of these sites with MetaMask installed, and you'll be able to manage your tokens freely.
+ 
 ## "Loose" Accounts
 
 Suppose you used the **Import Account** capability to import an account. Now, when you click **Switch Accounts**, you see the word **Loose** with a bright red oval background superimposed on your account avatar.
