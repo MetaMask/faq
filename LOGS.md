@@ -70,3 +70,9 @@ Retrieve the data like this:
 4. You should see an item called `chrome-extension://nkbi.....`.  Click this.
 5. In the row whose Key is `metamask-config`, double click the `Value` column, to highlight the config, and copy it. It should start something like: `{"meta":{"version":11},"data":{...`.
 6. Paste this into a text document, or somewhere safe, and send it to the trusted party to help debug.
+
+## View Debug Level Logs (Chrome)
+
+1. Follow the steps above to open the background page dev console in Chrome
+2. Type the following command into the console `log.setLevel(1)`
+3. Keep using your Dapp and you should start seeing outputs for debug logs in the dev console
