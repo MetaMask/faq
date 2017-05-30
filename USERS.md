@@ -29,6 +29,22 @@ A few popular options are:
 - [Token Factory](https://tokenfactory.surge.sh/#/factory)
 
 Just visit any of these sites with MetaMask installed, and you'll be able to manage your tokens freely.
+
+## Slow Transactions
+
+If you submitted a transaction with a very low gas price, and it’s stuck pending without being mined, currently the only way to get MetaMask to forget about this tx and reset its nonce is to restore MetaMask to a fresh state.
+
+To reset MetaMask’s state:
+
+- Make sure you have your seed phrase backed up.
+- Lock MetaMask (in the top right menu)
+- Click “Forgot my Password (import)”
+- Enter your seed phrase.
+- You should be able to submit transactions again.
+
+Please note these newly submitted transactions will be *competing with your previously submitted transactions* to be mined first, so there is no guarantee they will not be mined first. The only strategy to help the odds of the later transactions being mined first is to submit them with a higher gas price.
+
+For advice on what gas prices will be mined with what urgency, refer to [Eth Gas Station](http://ethgasstation.info/).
  
 ## "Loose" Accounts
 
