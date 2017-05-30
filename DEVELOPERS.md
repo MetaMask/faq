@@ -75,7 +75,7 @@ web3.version.getNetwork((err, netId) => {
       console.log('This is the deprecated Morden test network.')
       break
     case "3":
-      console.log('This is the ropsten teest network.')
+      console.log('This is the ropsten test network.')
       break
     default:
       console.log('This is an unknown network.')
