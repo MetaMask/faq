@@ -46,7 +46,7 @@ Just listen for a response, and when the blockchain RPC has received the transac
 
 ### :dizzy: All Async - Think of MetaMask as a light client
 
-The user does not have the full blockchain on their machinek, so data lookups can be a little slow.
+The user does not have the full blockchain on their machine, so data lookups can be a little slow.
 For this reason, we are unable to support most synchronous methods. The exceptions to this are:
 * `eth_accounts` (`web3.eth.accounts`)
 * `eth_coinbase` (`web3.eth.coinbase`)
