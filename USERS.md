@@ -25,7 +25,7 @@ Since MetaMask allows any website to interact with the blockchain, you can use a
 
 A few popular options are:
 - [The Ethereum Wallet](https://wallet.ethereum.org/)
-- [Token Ninja](https://tokenninja.github.io/page)
+- [Token Ninja](https://tokenninja.github.io/)
 - [Token Factory](https://tokenfactory.surge.sh/#/factory)
 
 Just visit any of these sites with MetaMask installed, and you'll be able to manage your tokens freely.
