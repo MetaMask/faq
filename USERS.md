@@ -28,7 +28,10 @@ A few popular options are:
 - [Token Ninja](https://tokenninja.github.io/)
 - [Token Factory](https://tokenfactory.surge.sh/#/factory)
 
-Just visit any of these sites with MetaMask installed, and you'll be able to manage your tokens freely.
+Just visit any of these sites with MetaMask installed, and you'll be able to manage your tokens freely. Remember that when transfering tokens, you still pay fees in Ether.
+
+A good block explorer for token balances (view only, can't send)  is:
+- https://ethplorer.io/
 
 ## Slow Transactions
 
