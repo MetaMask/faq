@@ -16,3 +16,7 @@ Here, we've got a variety of guides for people interested in MetaMask. Go ahead 
   ![click the test network](https://github.com/MetaMask/faq/blob/master/images/click-the-test-network.png)
 
   This action logs you out of MetaMask. When you log back into MetaMask with your password, MetaMask shows the correct account balances.
+
+## Q: I can't use the import feature for uploading a JSON file! The window keeps closing when I try to select a file!
+* **Cause**: This is a known bug in Google Chrome that appears in Ubuntu and some Windows builds.
+* **Solution**: A good workaround is to open the extension url, chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/popup.html, directly in a new tab and import through the tab.
