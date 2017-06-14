@@ -17,7 +17,7 @@ After providing your email address and phone number, enter your debit card numbe
 
 ### How much Ether can I buy?
 
-For the most updated statistics on buy limits, check this link ![here](https://developers.coinbase.com/docs/buy-widget). As of this updated FAQ, there is a limit of $350 a week with a lifetime limit of $500 within the widget. Beyond that limit, you'll be asked to sign into Coinbase and complete further verifications to continue purchasing ETH via the MetaMask integration.
+For the most updated statistics on buy limits, check this link [here](https://developers.coinbase.com/docs/buy-widget). As of this updated FAQ, there is a limit of $350 a week with a lifetime limit of $500 within the widget. Beyond that limit, you'll be asked to sign into Coinbase and complete further verifications to continue purchasing ETH via the MetaMask integration.
 
 ### How long does it take?
 
@@ -29,7 +29,7 @@ This information helps Coinbase prevent fraud.
 
 ### Is this feature available outside the US?
 
-The widget is unavailable for use in the US, but if you're intent on using Coinbase, please check this link ![here](https://www.coinbase.com/global) for a list of supported countries.
+The widget is unavailable for use in the US, but if you're intent on using Coinbase, please check this link [here](https://www.coinbase.com/global) for a list of supported countries.
 
 ### Are there other payment options available?
 
