@@ -87,5 +87,5 @@ That said, you can also export a MetaMask account, or import another account int
 
 ## How to change the MetaMask popup's font size (Chrome)
 
-1. Visit `chrome-extension://ebjbdknjcgcbchkagneicjfpneaghdhb/popup.html` (this opens the popup in a browser window).
+1. Visit `chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/popup.html` (this opens the popup in a browser window).
 2. Use the browser zoom commands to zoom out a few clicks. This is in the `View` menu. The zoom size on this tab should also affect the popup.
