@@ -39,12 +39,14 @@ To get logs from MetaMask's background process in Chrome:
 
 ## UI State Logs (Chrome)
 
-If you've found a visual glitch in the rendering of MetaMask, we might ask you for a UI State log.  To get one of these:
+If you've had an issue sending transactions or found a visual glitch in the rendering of MetaMask, we might ask you for a UI State log.  To get one of these:
 
-1. Follow the steps above to open the `Popup Logs (Chrome)`.
-2. At the bottom of the console, enter the text `logState()` and hit `Enter`.
-3. The console will then spit out a big bunch of text, something that looks like [this](https://github.com/MetaMask/metamask-plugin/blob/master/development/states/account-detail.json).
-4. Copy that entire text blob and send it to us, ideally in [a new Github issue](https://github.com/MetaMask/metamask-plugin/issues/new).
+1. Open MetaMask and ensure its unlocked.
+2. Click the menu in the top right, click "Settings".
+3. Click the button that says "Copy State Logs".
+4. It will copy something that looks like [this](https://github.com/MetaMask/metamask-plugin/blob/master/development/states/account-detail.json).
+5. Upload it as a [gist](https://gist.github.com/) or to some other pastebin site 
+5. Send the link to us, ideally in [a new Github issue](https://github.com/MetaMask/metamask-plugin/issues/new).
 
 ## Crash Logs (Chrome)
 
