@@ -83,14 +83,14 @@ web3.version.getNetwork((err, netId) => {
 })
 ```
 
-See the [ethereum wiki on "getNetwork" ] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
+See the [ethereum wiki on "getNetwork" ](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
 ### :squirrel: Account management and transaction signing is managed externally to the dapp
 
 Many Dapps have a built-in identity management solution as a fallback.
 When an Ethereum Browser environment has been detected, the user interface should reflect that the accounts are being managed externally.
 
-Also see the [Ethereum wiki on "accounts"] (https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
+Also see the [Ethereum wiki on "accounts"](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
 
 ### :raising_hand: Account List Reflects User Preference
 
