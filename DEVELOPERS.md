@@ -1,4 +1,4 @@
-# MetaMask Compatibility Guide 
+# MetaMask Compatibility Guide
 
 While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
 
@@ -58,7 +58,7 @@ Usually, to make a method call asynchronous, add a callback as the last argument
 
 Using synchronous calls is both a technical limitation and a user experience issue. They block the user's interface. So using them is a bad practice, anyway. Think of this API restriction as a gift to your users.
 
-## Best Practices :bowtie: 
+## Best Practices :bowtie:
 
 ### :construction_worker: Network check
 
@@ -114,3 +114,9 @@ var accountInterval = setInterval(function() {
 ```
 If you think this is an antipattern, and should be replaced with an event/subscription model, we encourage you to voice that opinion. Let us know, and we could get an improved API adopted as an [EIP](https://github.com/ethereum/EIPs).
 
+## Download MetaMask Badge
+
+If you'd like to encourage your users to download MetaMask, feel free to use either of these images, linking to [metamask.io](https://metamask.io):
+
+![download metamask button](./images/download-metamask.png)
+![download metamask button dark](./images/download-metamask-dark.png)
