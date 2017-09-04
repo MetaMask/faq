@@ -28,13 +28,13 @@ These methods all correspond directly to the options in [the RPC provider spec](
 
 Because this API is not very user friendly, most developers will import a convenience library like Web3 or EthJS using the bundler of their chocie.
 
-### Installing Web3.js
+## Installing Web3.js
 
-The Web3.js library has [a guide for importing with different bundlers](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3).
+[The Web3.js library](https://github.com/ethereum/web3.js/) has [a guide for importing with different bundlers](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3).
 
 ## Installing EthJS
 
-EthJS can be installed via NPM with npm or yarn by running `npm install`.
+[EthJS(https://github.com/ethjs/ethjs) can be installed via NPM with npm or yarn by running `npm install`.
 
 ## Using an Abstraction Library
 
