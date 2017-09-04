@@ -36,6 +36,8 @@ window.addEventListener('load', function() {
 ```
 This code snippet is modified from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
+You can find more notes on [detecting metamask here](./detecting_metamask.md).
+
 ### :dancers: We Handle User Authorization
 
 Forget what you know about key management, your Dapp likely won't need to call `sendRawTransaction` anymore.
