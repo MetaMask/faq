@@ -34,7 +34,7 @@ Because this API is not very user friendly, most developers will import a conven
 
 ## Installing EthJS
 
-[EthJS(https://github.com/ethjs/ethjs) can be installed via NPM with npm or yarn by running `npm install`.
+[EthJS](https://github.com/ethjs/ethjs) can be installed via NPM with npm or yarn by running `npm install`.
 
 ## Using an Abstraction Library
 
