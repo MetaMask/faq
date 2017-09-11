@@ -1,6 +1,6 @@
 # Getting MetaMask Logs
 
-If you've run into an issue, and reported it on [our Github](https://github.com/MetaMask/metamask-plugin/issues) or [our Slack](http://slack.metamask.io/), but we haven't been able to figure it out, we might ask you to get us some logs.
+If you've run into an issue, and reported it on [our Github](https://github.com/MetaMask/metamask-plugin/issues) or [our Slack](http://slack.metamask.io/), but we haven't been able to figure it out, we might ask you to get us some logs that you should submit [here](http://metamask.consensyssupport.happyfox.com/home) with your issue number or brief descrption of the problem that you are having. Do not post your logs publicly.
 
 There are four types of logs that you might need to check:
 - UI State Logs
