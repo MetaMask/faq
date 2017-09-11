@@ -1,5 +1,7 @@
 # MetaMask Users FAQ
 
+This document is slightly outdated, you can find more docs and get help on [our new Support Center](https://support.metamask.io).
+
 ## Information on Buying Ether Within MetaMask
 
 Check out our [Coinbase guide](./COINBASE.md)
