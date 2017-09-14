@@ -26,6 +26,7 @@ MetaMask does not currently display your token balances, but that doesn't mean y
 Since MetaMask allows any website to interact with the blockchain, you can use any token managing UI you like to view and send tokens.
 
 A few popular options are:
+- [My Ether Wallet](https://www.myetherwallet.com/#send-transaction)
 - [The Ethereum Wallet](https://wallet.ethereum.org/)
 - [Token Ninja](https://tokenninja.github.io/)
 - [Token Factory](https://tokenfactory.surge.sh/#/factory)
