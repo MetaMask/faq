@@ -42,13 +42,13 @@ Once you've detected an Ethereum browser, and imported a convenience library, yo
 
 ```javascript
 var Web3 = require('web3')
-var localWeb3 = new Web3(window.web3.currentProvider)
+var localWeb3 = new Web3(web3.currentProvider)
 ```
 
 Initializing an EthJS instance looks similar:
 ```javascript
 const Eth = require('ethjs');
-const eth = new Eth(window.web3.currentProvider);
+const eth = new Eth(web3.currentProvider);
 ```
 ## Web3 Deprecation
 Originally (and maybe still), Ethereum browsers injected an instance of the web3 convenience library as a global `window.web3` object.  This created difficulties for many users, because this convenience library's API changed often and casually, and so it was not a stable API surface to build a web app on top of.
