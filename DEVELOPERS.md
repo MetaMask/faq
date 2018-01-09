@@ -79,9 +79,12 @@ web3.version.getNetwork((err, netId) => {
     case "3":
       console.log('This is the ropsten test network.')
       break
-   case "4":
-      console.log('This is the rinkeby test network.')
-      break   
+    case "4":
+      console.log('This is the Rinkeby test network.')
+      break
+    case "42":
+      console.log('This is the Kovan test network.')
+      break
     default:
       console.log('This is an unknown network.')
   }
