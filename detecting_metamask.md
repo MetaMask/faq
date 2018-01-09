@@ -28,6 +28,8 @@ The `options` object has several useful fields: `method` (the method name), `fro
 
 These methods all correspond directly to the options in [the RPC provider spec](https://github.com/ethereum/wiki/wiki/JSON-RPC).
 
+To see if the injected provider is from MetaMask, you can check `web3.currentProvider.isMetaMask`.
+
 ## Installing Web3.js
 
 Because default `web3` API is not very user friendly, most developers will import a convenience library like Web3.js or EthJS using the bundler of their choice.
