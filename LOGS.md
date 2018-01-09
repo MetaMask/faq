@@ -57,6 +57,20 @@ In these cases, you'll need to start your browser in a way that it writes its lo
 
 [This process is described here](https://www.chromium.org/for-testers/enable-logging), and we hope to write more specific steps on this in the future. If you have to go through this process, please do record the steps, so we can have more detailed instructions here for different platforms.
 
+In short this looks like:
+
+1. Close all Google Chrome processes
+
+2. Start chrome in the terminal
+linux:
+```
+google-chrome --enable-logging=stderr
+```
+MacOS:
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --enable-logging=stderr
+```
+
 ## Internal Storage (Chrome)
 
 If your bug has been highly severe, and there is suspicion of a security issue, the most extreme kind of data you could provide is your MetaMask internal storage.
