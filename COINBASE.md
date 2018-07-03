@@ -21,7 +21,7 @@ For the most updated statistics on buy limits, check this link [here](https://de
 
 ### How long does it take?
 
-A buying the ETH takes about two minutes. Coinbase sends the ETH instantly, but it can take up to a minute to appear in your MetaMask account balance.
+Buying the ETH takes about two minutes. Coinbase sends the ETH instantly, but it can take up to a minute to appear in your MetaMask account balance.
 
 ### Why do I need to provide an email address and phone number?
 
@@ -29,7 +29,7 @@ This information helps Coinbase prevent fraud.
 
 ### Is this feature available outside the US?
 
-The widget is unavailable for use in the US, but if you're intent on using Coinbase, please check this link [here](https://www.coinbase.com/global) for a list of supported countries.
+The widget is only available for use in the US, but if you're intent on using Coinbase, please check this link [here](https://www.coinbase.com/global) for a list of supported countries.
 
 ### Are there other payment options available?
 
