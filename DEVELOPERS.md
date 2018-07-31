@@ -1,6 +1,6 @@
 # MetaMask Compatibility Guide
 
-While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
+While MetaMask exposes the [standard Ethereum provider API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.
 
 ## Requirements :nut_and_bolt:
 
@@ -8,35 +8,9 @@ While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ether
 
 Due to browser security restrictions, we can't communicate with dapps running on `file://`. Please use a local server for development.
 
-### :partly_sunny: Web3 - Ethereum Browser Environment Check
+### :partly_sunny: Ethereum Browser Environment Check
 
-MetaMask injects `web3` object and convenience Web3.js library into the javascript context.
-Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
-You can use the injected Web3.js directly, but the best practice is to explicitly bundle **the version of web3.js you used during development**.
-
-Note that the environmental `web3` check is wrapped in a `window.addEventListener('load', ...)` handler. This approach avoids race conditions with web3 injection timing.
-
-```js
-window.addEventListener('load', function() {
-
-  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
-  if (typeof web3 !== 'undefined') {
-    // Use Mist/MetaMask's provider
-    web3js = new Web3(web3.currentProvider);
-  } else {
-    console.log('No web3? You should consider trying MetaMask!')
-    // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    web3js = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-  }
-
-  // Now you can start your app & access web3 freely:
-  startApp()
-
-})
-```
-This code snippet is modified from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
-
-You can find more notes on [detecting metamask here](./detecting_metamask.md).
+See [Detecting MetaMask](./detecting_metamask.md) for more information.
 
 ### :dancers: We Handle User Authorization
 
