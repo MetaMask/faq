@@ -6,7 +6,7 @@ While MetaMask exposes the [standard Ethereum web3 API](https://github.com/ether
 
 ### :globe_with_meridians: Http(s) - Web Server Required
 
-Due to browser security restrictions, we can't communicate with dapps running on `file://`. Please use a local server for development.
+Due to browser security restrictions, we can't communicate with DApps running on `file://`. Please use a local server for development.
 
 ### :partly_sunny: Web3 - Ethereum Browser Environment Check
 
@@ -40,7 +40,7 @@ You can find more notes on [detecting metamask here](./detecting_metamask.md).
 
 ### :dancers: We Handle User Authorization
 
-Forget what you know about key management, your Dapp likely won't need to call `sendRawTransaction` anymore.
+Forget what you know about key management, your DApp likely won't need to call `sendRawTransaction` anymore.
 
 Any time you make a call that requires a private key to sign something (`sendTransaction`, `sign`), MetaMask will automatically prompt the user for permission, and then forward the signed request on to the blockchain (or return it to you, if it was a call to `sign`).
 
@@ -64,7 +64,7 @@ Using synchronous calls is both a technical limitation and a user experience iss
 
 ### :construction_worker: Network check
 
-When a user interacts with a dapp via MetaMask, they may be on the mainnet or testnet. As a best practice, your dapp should inspect the current network via the `net_version` json rpc call. Then, the dapp can use the correct deployed contract addresses for the network, or show which network is expected in a message.
+When a user interacts with a DApp via MetaMask, they may be on the mainnet or testnet. As a best practice, your DApp should inspect the current network via the `net_version` json rpc call. Then, the DApp can use the correct deployed contract addresses for the network, or show which network is expected in a message.
 
 For example:
 ```javascript
@@ -93,9 +93,9 @@ web3.version.getNetwork((err, netId) => {
 
 See the [ethereum wiki on "getNetwork" ](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3versionnetwork)
 
-### :squirrel: Account management and transaction signing is managed externally to the dapp
+### :squirrel: Account management and transaction signing is managed externally to the DApp
 
-Many Dapps have a built-in identity management solution as a fallback.
+Many DApps have a built-in identity management solution as a fallback.
 When an Ethereum Browser environment has been detected, the user interface should reflect that the accounts are being managed externally.
 
 Also see the [Ethereum wiki on "accounts"](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethaccounts)
@@ -104,7 +104,7 @@ Also see the [Ethereum wiki on "accounts"](https://github.com/ethereum/wiki/wiki
 
 When a user selects an account in MetaMask, that account silently becomes the `web3.eth.accounts[0]` in your JS context, the only member of the `web3.eth.accounts` array.
 
-For your convenience, consider the `web3.eth.defaultAccount` variable a dapp-provided variable. However, it should not be used as a data source of user intention.
+For your convenience, consider the `web3.eth.defaultAccount` variable a DApp-provided variable. However, it should not be used as a data source of user intention.
 
 ### :ear: Listening for Selected Account Changes
 
