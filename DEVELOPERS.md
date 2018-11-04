@@ -10,29 +10,33 @@ Due to browser security restrictions, we can't communicate with dapps running on
 
 ### :partly_sunny: Web3 - Ethereum Browser Environment Check
 
-MetaMask injects `web3` object and convenience Web3.js library into the javascript context.
-Look for this before using your fallback strategy (local node / hosted node + in-dapp id mgmt / read-only / fail).
-You can use the injected Web3.js directly, but the best practice is to explicitly bundle **the version of web3.js you used during development**.
-
-Note that the environmental `web3` check is wrapped in a `window.addEventListener('load', ...)` handler. This approach avoids race conditions with web3 injection timing.
+The Ethereum provider injected by MetaMask and other dapp browsers is available at `window.ethereum`. Before reading user accounts or initiating RPC method calls that require user accounts, such as `eth_sendTransaction`, dapps must now request access to user accounts by calling a new method on the provider: `ethereum.enable()`. This method returns a Promise that’s either resolved with user accounts after user approval, or rejected with an Error after user rejection.
 
 ```js
-window.addEventListener('load', function() {
-
-  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
-  if (typeof web3 !== 'undefined') {
-    // Use Mist/MetaMask's provider
-    web3js = new Web3(web3.currentProvider);
-  } else {
-    console.log('No web3? You should consider trying MetaMask!')
-    // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    web3js = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+window.addEventListener('load', async () => {
+  // Modern dapp browsers...
+  if (window.ethereum) {
+    window.web3 = new Web3(ethereum);
+    try {
+      // Request account access if needed
+      await ethereum.enable();
+      // Acccounts now exposed
+      web3.eth.sendTransaction({/* ... */});
+    } catch (error) {
+      // User denied account access...
+    }
   }
-
-  // Now you can start your app & access web3 freely:
-  startApp()
-
-})
+  // Legacy dapp browsers...
+  else if (window.web3) {
+    window.web3 = new Web3(web3.currentProvider);
+    // Acccounts always exposed
+    web3.eth.sendTransaction({/* ... */});
+  }
+  // Non-dapp browsers...
+  else {
+    console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+  }
+});
 ```
 This code snippet is modified from the [ethereum wiki on "adding web3"](https://github.com/ethereum/wiki/wiki/JavaScript-API#adding-web3)
 
