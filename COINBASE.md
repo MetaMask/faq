@@ -1,3 +1,5 @@
+**This document may be outdated. Find our most up-to-date documentation [here](https://metamask.github.io/metamask-docs/)**
+
 Is your MetaMask balance a bit low? Are you excited about Ethereum, but not sure where to get ETH quickly and easily?
 
 Now, you can use the **Buy** button in the MetaMask plugin.
