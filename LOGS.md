@@ -1,3 +1,5 @@
+**This document may be outdated. Find our most up-to-date documentation [here](https://metamask.github.io/metamask-docs/)**
+
 # Getting MetaMask Logs
 
 If you've run into an issue, and reported it on [our Github](https://github.com/MetaMask/metamask-plugin/issues) or [our Slack](http://slack.metamask.io/), but we haven't been able to figure it out, we might ask you to get us some logs that you should submit [here](http://metamask.consensyssupport.happyfox.com/home) with your issue number or brief descrption of the problem that you are having. Do not post your logs publicly.
@@ -16,7 +18,7 @@ If you've had an issue sending transactions or found a visual glitch in the rend
 2. Click the menu in the top right, click "Settings".
 3. Click the button that says "Copy State Logs".
 4. It will copy something that looks like [this](https://github.com/MetaMask/metamask-plugin/blob/master/development/states/account-detail.json).
-5. Upload it as a [gist](https://gist.github.com/) or to some other pastebin site 
+5. Upload it as a [gist](https://gist.github.com/) or to some other pastebin site
 6. Send the link to us, ideally in [a new Github issue](https://github.com/MetaMask/metamask-plugin/issues/new).
 
 
