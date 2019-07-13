@@ -1,3 +1,5 @@
+**This document may be outdated. Find our most up-to-date documentation [here](https://metamask.github.io/metamask-docs/)**
+
 # MetaMask Compatibility Guide
 
 While MetaMask exposes the [standard Ethereum provider API](https://github.com/ethereum/wiki/wiki/JavaScript-API), there are few things to keep in mind. Below are requirements for MetaMask support as well as some best practices to keep in mind.

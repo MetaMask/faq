@@ -1,3 +1,5 @@
+**This document may be outdated. Find our most up-to-date documentation [here](https://metamask.github.io/metamask-docs/)**
+
 # Developing for MetaMask
 
 MetaMask enables your website to read from the blockchain and propose transactions to the current user. To enjoy these benefits, you have to first check if the user has an Ethereum-compatible browser like MetaMask.
